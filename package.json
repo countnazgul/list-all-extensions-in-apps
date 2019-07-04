@@ -1,0 +1,24 @@
+{
+  "name": "list-all-extensions-in-apps",
+  "version": "1.0.0",
+  "description": "Qlik Sense -  Loop through all objects in all apps and list the extensions used",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/countnazgul/list-all-extensions-in-apps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/countnazgul/list-all-extensions-in-apps/issues"
+  },
+  "homepage": "https://github.com/countnazgul/list-all-extensions-in-apps#readme",
+  "dependencies": {
+    "enigma.js": "^2.4.0",
+    "ws": "^7.0.1"
+  }
+}

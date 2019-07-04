@@ -1,0 +1,31 @@
+{
+    "qlik": {
+        "host": "localhost",
+        "port": "4848"
+    },
+    "nonExtensionObjects": [
+        "snapshot",
+        "measure",
+        "dimension",
+        "LoadModel",
+        "embeddedsnapshot",
+        "slideitem",
+        "slide",
+        "story",
+        "StringExpression",
+        "masterobject",
+        "listbox",
+        "sheet",
+        "table",
+        "pivot-table",
+        "scatterplot",
+        "barchart",
+        "filterpane",
+        "combochart",
+        "map",
+        "treemap",
+        "linechart",
+        "piechart",
+        "kpi"
+    ]
+}
