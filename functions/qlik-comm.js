@@ -26,10 +26,19 @@ const doc = {
     open: async function (global, id, noData) {
         return await global.openDoc(id, null, null, null, noData)
     },
-    
+
+}
+
+const qObj = {
+    getExtensionDetails: async function (obj) {
+        
+        let qObjProps = await obj.getProperties()
+        return qObjProps
+    }
 }
 
 module.exports = {
     general,
-    doc
+    doc,
+    qObj
 }

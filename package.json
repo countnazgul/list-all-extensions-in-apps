@@ -1,6 +1,6 @@
 {
   "name": "list-all-extensions-in-apps",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Qlik Sense -  Loop through all objects in all apps and list the extensions used",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/countnazgul/list-all-extensions-in-apps#readme",
   "dependencies": {
     "enigma.js": "^2.4.0",
+    "jsonexport": "^2.4.1",
     "ws": "^7.0.1"
   }
 }

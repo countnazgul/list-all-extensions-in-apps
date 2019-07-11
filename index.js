@@ -6,12 +6,14 @@ const helpers = require('./functions/helpers.js');
     let session = qlikComm.general.createSession()
     let global = await qlikComm.general.global(session)
 
-    let docs = await qlikComm.doc.getAll(global);
-    let doc = await qlikComm.doc.open(global, "C:\\Users\\Home\\Documents\\Qlik\\Sense\\Apps\\Consumer Sales.qvf", true)
+    let doc = await qlikComm.doc.open(global, "C:\\Users\\Lenovo-Yoga-260\\Documents\\Qlik\\Sense\\Apps\\SkyLine TEST.qvf", true)
 
     let allInfos = await doc.getAllInfos()
     let extensionObjects = await qlikHelpers.filterOnlyExtensionObjects(doc, allInfos)
-    let a = 1
+
+    let dataToPrint = helpers.prepareResult(extensionObjects)
+    let printData = helpers.printResult(dataToPrint)
+    // let a = 1
 
     await session.close()
 
