@@ -3,7 +3,6 @@ const enigma = require('enigma.js');
 const WebSocket = require('ws');
 const schema = require('enigma.js/schemas/12.20.0.json');
 
-// const helpers = require('./helpers.js');
 const config = JSON.parse(fs.readFileSync('./config.json'));
 
 function createSession() {
@@ -48,8 +47,6 @@ const qObj = {
         return qObjProps
     }
 }
-
-
 
 module.exports = {
     general: general,

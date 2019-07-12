@@ -1,7 +1,7 @@
 {
   "name": "list-all-extensions-in-apps",
-  "version": "0.0.2",
-  "description": "Qlik Sense -  Loop through all objects in all apps and list the extensions used",
+  "version": "0.0.3",
+  "description": "Qlik Sense - Loop through all objects in all apps and list the extensions used",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,12 @@
     "url": "git+https://github.com/countnazgul/list-all-extensions-in-apps.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Stefan Stoichev",
+    "email": "stefan.stoichev@gmail.com",
+    "url": "https://sstoichev.eu"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/countnazgul/list-all-extensions-in-apps/issues"
   },

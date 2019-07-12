@@ -1,4 +1,3 @@
-// const helpers = require('./helpers.js');
 const qlikComm = require('./qlik-comm.js')
 const fs = require('fs');
 const config = JSON.parse(fs.readFileSync('./config.json'));
@@ -23,10 +22,6 @@ const filterOnlyExtensionObjects = async function (qDoc, allObjects) {
                 })
             }
         }
-        // let realExtensionObjects = possibleExtensionObjects.filter(async function (extObj) {
-        //     let isReallyExtension = await realExtensionCheck(qDoc, extObj.qId)
-        //     return isReallyExtension == true
-        // })
 
         return realExtensionObjects
     } else {
@@ -48,24 +43,24 @@ const realExtensionCheck = async function (qDoc, objId) {
         }
 
     } catch (e) {
-        // console.log(`${e.message}`)
+        console.log(`${e.message}`)
     }
     return { qObjProps, result }
 }
 
-const extractExtensionObjectsData1 = async function (qDoc) {
-    let session = qlikComm.general.createSession()
-    let global = await session.open()
-    let doc = await qlikComm.doc.open(global, qDoc, true)
+// const extractExtensionObjectsData1 = async function (qDoc) {
+//     let session = qlikComm.general.createSession()
+//     let global = await session.open()
+//     let doc = await qlikComm.doc.open(global, qDoc, true)
 
-    let allInfos = await doc.getAllInfos()
-    let extensionObjects = await filterOnlyExtensionObjects(doc, allInfos)
-    await session.close()
+//     let allInfos = await doc.getAllInfos()
+//     let extensionObjects = await filterOnlyExtensionObjects(doc, allInfos)
+//     await session.close()
 
-    return extensionObjects
-}
+//     return extensionObjects
+// }
 
 module.exports = {
-    extractExtensionObjectsData1,
+    // extractExtensionObjectsData1,
     filterOnlyExtensionObjects
 }

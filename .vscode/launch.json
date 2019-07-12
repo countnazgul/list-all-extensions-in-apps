@@ -7,8 +7,12 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Main",
-            "program": "${workspaceFolder}\\index.js"
+            "name": "Main Desktop",
+            "program": "${workspaceFolder}\\index.js",
+            "env": {
+                "qshost": "localhost",
+                "qsport": "4848"
+            }
         }
     ]
 }

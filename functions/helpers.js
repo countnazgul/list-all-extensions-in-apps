@@ -38,15 +38,16 @@ const preparePromises = function (allQlikDocs) {
 
 async function extractExtensionObjectsData(qDoc) {
     try {
+        console.log(`Opened ${qDoc.qDocName} ...`)
         let session = qlikComm.createSession()
         let global = await session.open()
         let doc = await qlikComm.doc.open(global, qDoc, true)
-        // let doc = await global.openDoc(qDoc.qDocId, null, null, null, true)
 
         let allInfos = await doc.getAllInfos()
         let extensionObjects = await qlikHelpers.filterOnlyExtensionObjects(doc, allInfos)
         await session.close()
 
+        console.log(`Closed app: ${qDoc.qDocName}. Total objects processed: ${allInfos.length}`)
         return extensionObjects
     } catch (e) {
         let a = 1

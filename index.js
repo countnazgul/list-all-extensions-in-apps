@@ -1,9 +1,6 @@
 
 const qlikComm = require('./functions/qlik-comm.js');
-// const qlikHelpers = require('./functions/qlik-helpers.js');
 const helpers = require('./functions/helpers.js');
-
-
 
 (async function () {
     let session = qlikComm.general.createSession()
@@ -11,22 +8,21 @@ const helpers = require('./functions/helpers.js');
     let allQlikDocs = await global.getDocList()
     await session.close()
 
-    console.log('preparing')
+    console.log()
+    console.log(`To process: ${allQlikDocs.length} document(s)`)
+    console.log()
+
     let docPromises = helpers.preparePromises(allQlikDocs)
 
-    console.log('prepared')
     const result = await Promise.all(docPromises);
     let dataToPrint = helpers.prepareResult(result)
     let printData = helpers.printResult(dataToPrint)
 
 
-    console.log('done')
-    // let a = 1;
+    console.log()
+    console.log()
+    console.log(`Found and exported ${dataToPrint.length} extension object(s)`)
+    console.log()
     process.exit(0)
-
-    // let a = 1
-
-
-
 })()
 
