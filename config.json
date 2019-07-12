@@ -3,6 +3,8 @@
         "host": "localhost",
         "port": "4848"
     },
+    "outputFile": ".\\export.csv",
+    "parralelDocs": "4",
     "nonExtensionObjects": [
         "snapshot",
         "measure",
